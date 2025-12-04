@@ -1,6 +1,6 @@
 <template>
     <div class="welcome-screen">
-        <h1 class="welcome-text">Welcome Starcrew!</h1>
+        <h1 class="welcome-text">Welcome, Starcrew!</h1>
         <div class="button-group">
             <RouterLink to="/register">
                 <PixelButton bg-color="#ffd6a5" shadow-color="black" label="Register" />

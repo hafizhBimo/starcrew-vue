@@ -1,6 +1,5 @@
 <template>
   <footer class="pixel-footer">
-    <p class="footer-text">© 2024 StarCrew. All rights reserved.</p>
     <div class="social-links">
       <a href="https://www.youtube.com/@StarmanPlay" target="_blank" rel="noopener noreferrer">
         <img src="@/assets/logo/youtubelogo.png" alt="YouTube" />
@@ -12,27 +11,26 @@
         <img src="@/assets/logo/discordlogo.png" alt="Discord" />
       </a>
     </div>
+    <p class="footer-text">© 2024 StarCrew. All rights reserved.</p>
   </footer>
 </template>
 
-
 <script setup>
-// No logic needed for now, purely presentational
+// No logic needed
 </script>
 
 <style scoped lang="scss">
 .pixel-footer {
   display: flex;
-  justify-content: center; /* Centers content */
+  justify-content: center;
   align-items: center;
-  position: relative; /* So we can absolutely position icons */
+  position: relative;
   padding: 16px;
-  // background-color: #000;
-  // color: #fff;
-  // border-top: 4px solid #fff;
-  // box-shadow: 0 -4px 0 #000;
   font-family: 'Press Start 2P', cursive;
   font-size: 12px;
+
+  // Default layout (desktop)
+  flex-direction: row;
 }
 
 .footer-text {
@@ -41,21 +39,35 @@
 
 .social-links {
   position: absolute;
-  right: 16px; /* Push icons to the right */
+  right: 16px;
   display: flex;
   gap: 20px;
 
   img {
-    width: 40px;  /* Bigger size */
+    width: 40px;
     height: 40px;
     image-rendering: pixelated;
     cursor: pointer;
+    transition: transform 0.2s ease;
 
     &:hover {
       transform: scale(1.3);
     }
   }
 }
+
+@media (max-width: 600px) {
+  .pixel-footer {
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+  }
+
+  .social-links {
+    position: static;
+    margin-bottom: 10px;
+    justify-content: center;
+  }
+}
 </style>
-
-

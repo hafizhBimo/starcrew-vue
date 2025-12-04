@@ -14,7 +14,7 @@ const register = () => {
 };
 
 const goBack = () => {
-  router.push('/');
+  router.back();
 };
 </script>
 
@@ -57,5 +57,40 @@ const goBack = () => {
     display: flex;
     align-items: center;
     gap: 16px;
+}
+
+@media (max-width: 768px) {
+    .register-box {
+        max-width: 100%;
+        padding: 16px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .pixel-button {
+        font-size: 12px;
+    }
+
+    .login-link {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .header h1 {
+        font-size: 18px;
+    }
+
+    .pixel-input input {
+        font-size: 14px;
+    }
 }
 </style>
