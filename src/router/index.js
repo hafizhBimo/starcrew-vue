@@ -2,10 +2,27 @@ import { createRouter, createWebHistory } from 'vue-router'
 import LoginView from '@/views/LoginView.vue'
 import WelcomeView from '@/views/WelcomeView.vue'
 import HomeView from '@/views/HomeView.vue'
+import MainLayout from '@/layouts/MainLayout.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    {
+      path: '/',
+      component: MainLayout,
+      children: [
+        {
+          path: '',
+          name: 'feed',
+          component: () => import('../views/FeedView.vue'),
+        },
+        // {
+        //   path: 'fanart',
+        //   name: 'fanart',
+        //   component: () => import('../views/FanArtView.vue'),
+        // }
+      ]
+    },
     {
       path: '/welcome',
       name: 'welcome',
