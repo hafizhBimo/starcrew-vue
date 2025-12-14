@@ -1,6 +1,6 @@
 <template>
   <div class="profile-card">
-    <!-- <img src="/avatar.png" class="avatar" /> -->
+    <img src="https://api.dicebear.com/8.x/bottts/svg?seed=Fan01" class="avatar" />
 
     <h2 class="name">Captain</h2>
     <p class="role">Founder of StarCrew 🚀</p>
